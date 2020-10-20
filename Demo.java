@@ -4,6 +4,17 @@ public class Demo{
     if(args.length != 0){
       x = Integer.parseInt(args[0]);
     }
-    System.out.print(printLoop.printLoop(x));
+    System.out.print(printLoop(x));
   }
+
+public static String printLoop(int n){
+  String numbers = "";
+  for(int i = 1; i <= n; i++){
+    for(int j = 0; j <= n - i; j++ ){
+      numbers += i;
+    }
+    numbers += "\n";
+  }
+  return numbers;
+}
 }
